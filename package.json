@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@hocuspocus/extension-database": "^2.9.0",
+    "@hocuspocus/extension-logger": "^2.9.0",
     "@hocuspocus/server": "^2.9.0",
-    "mongoose": "^8.1.0"
+    "mongoose": "^8.1.0",
+    "nodemon": "^3.0.3"
   }
 }

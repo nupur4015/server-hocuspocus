@@ -13,13 +13,13 @@ mongoose.connect(MONGODB_URI, {
 const configureDatabase = () => {
 
   return new Database({
-    fetch: async ({ documentName }) => {
+    fetch: async (result) => {
       try {
         const document = await DocumentModel
-          .findOne({ name: documentName })
+          .findOne({ name: result.documentName })
           .sort({ _id: -1 })
           .exec();
-
+        console.log(result.instance.configuration.onLoadDocument);
         return document ? document.data : null;
       } catch (error) {
         throw error;
